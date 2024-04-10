@@ -108,7 +108,7 @@ const Dashboard = () => {
 
       const handleLogOut = () =>{
           localStorage.removeItem("UserId");
-        window.location.href = "https://www.okx-assets.vercel.app/"
+        window.location.href = "https://okx-assets.vercel.app/"
       }
       const handleAdmin = () =>{
         nav(`UserUpdate`)
