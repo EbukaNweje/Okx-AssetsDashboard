@@ -18,7 +18,7 @@ const UpdateWallet = ({Display}) => {
   // const [sessionTime, setSessionTime] = useState()
   
 
-    const url = `https://okxnewbackend.onrender.com/api/alluserdata`
+    const url = `https://okx-assetsbackend.onrender.com/api/alluserdata`
   
     useEffect(()=>{
       axios.get(url)
@@ -71,7 +71,7 @@ const UpdateWallet = ({Display}) => {
       // }
 
       const deleteprofile = (id) => {
-        const url = `https://okxnewbackend.onrender.com/api/userdata/${id}`
+        const url = `https://okx-assetsbackend.onrender.com/api/userdata/${id}`
         axios.delete(url)
         .then(res => {
           console.log(res)
@@ -89,7 +89,7 @@ const UpdateWallet = ({Display}) => {
 
       const updatedata = {accountBalance, bonus,  ref, totalDeposit, totalWithdrawal};
       const updateprofile = (id) => {
-        const updateuserurl = `https://okxnewbackend.onrender.com/api/userdata/${id}`
+        const updateuserurl = `https://okx-assetsbackend.onrender.com/api/userdata/${id}`
           console.log(updateuserurl)
         axios.patch(updateuserurl, updatedata)
         .then(res => {
