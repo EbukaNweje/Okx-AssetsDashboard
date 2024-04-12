@@ -108,7 +108,7 @@ const Dashboard = () => {
 
       const handleLogOut = () =>{
           localStorage.removeItem("UserId");
-        window.location.href = "https://okx-assets.vercel.app/"
+        window.location.href = "https://okxassets.com/"
       }
       const handleAdmin = () =>{
         nav(`UserUpdate`)
@@ -498,7 +498,7 @@ const Dashboard = () => {
                             ) : null}
                         </div>
                         <div className="DashboardMainFooter">
-                            <p>All Rights Reserved ©  Okx-Assets 2023</p>
+                            <p>All Rights Reserved ©  OkxAssets 2024</p>
                         </div>
                     </div>
                 </div>

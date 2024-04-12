@@ -8,12 +8,18 @@ import {useSelector} from 'react-redux'
 import { useEffect, useState } from "react";
 import axios from "axios";
 import vid from '../../assets/crypt.mp4'
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 
 const DashHome = ({homechange, planchange, Transactions}) => {
     const [exchangeRate, setExchangeRate] = useState(null);
     const userData = useSelector((state) => state.persisitedReducer.user)
     console.log(userData);
+
+    const [state, setState] = useState({
+        value: "https://okxassets.com/",
+        copied: false,
+      });
 
     useEffect(() => {
         // Fetch the current exchange rate from an API (replace with a reliable API)
@@ -176,14 +182,19 @@ const DashHome = ({homechange, planchange, Transactions}) => {
                         <h3>Refer us & Earn</h3>
                         <p>Use the link below to invite your firends.</p>
                         <div className="DashHomeMainContenReferUsDivBox">
-                            <input
-                                type="text"
-                                value={`https://www.okx-assets.vercel.app/`}
-                                readOnly
-                            />
-                            <div className="DashHomeMainContenReferUsDivBoxCopy">
-                                <FaCopy />
-                            </div>
+                        <input
+                            type="text"
+                            value={state.value}
+                            readOnly
+                        />
+                                <CopyToClipboard
+                                 text={state.value}
+                                 onCopy={() => setState({ copied: true })}
+                                 >
+                                <div className="DepPaymentContentCTopReferUsDivBoxCopy" style={{height:"55px"}}>
+                                    <FaCopy />
+                                </div>
+                                 </CopyToClipboard>
                         </div>
                     </div>
                     <div className="DashHomeMainContenVidDiv">
