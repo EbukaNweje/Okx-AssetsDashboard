@@ -57,7 +57,7 @@ const DashHome = ({homechange, planchange, Transactions}) => {
                     
                 </h2>
                 <div className="DashHomeInfoBox1">
-                    <p>Welcome to Okx-Assets, Forverver in Profits.</p>
+                    <p>Welcome to Okx-Assets, Forever in Profits.</p>
                 </div>
                 <div className="DashHomeInfoBox2">
                     <p>Welcome to Okx-Assets</p>
