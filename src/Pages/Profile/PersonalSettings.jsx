@@ -13,7 +13,7 @@ const PersonalSettings = ({data}) => {
 
   const userinfo = {fullName, userName, phoneNumber}
 
-    const updateuserurl = `https://okx-assetsbackend.onrender.com/api/userdata/${data._id}`
+    const updateuserurl = `https://okx-assets-back-end.vercel.app/api/userdata/${data._id}`
     const upDateUser = () => {
         setButtonDisabled(true)
         axios.patch(updateuserurl, userinfo)
@@ -58,23 +58,13 @@ const PersonalSettings = ({data}) => {
                 </div>
                 <div className="ProfileContentPSRow2">
                     <div className="ProfileContentPSRow1A">
-                        <p>Address</p>
-                        <input type="text" placeholder={data.address} onChange={handleuserNameChange} />
+                        <p>UserName</p>
+                        <input type="text" placeholder={data.userName} onChange={handleuserNameChange} />
                     </div>
                     <div className="ProfileContentPSRow1B">
                         <p>Phone Number</p>
                         <input type="text" placeholder={data.phoneNumber} onChange={handlephoneNumberChange} />
                     </div>
-                </div>
-                <div className="ProfileContentPSRow2">
-                    <div className="ProfileContentPSRow1A">
-                        <p>Country</p>
-                        <input type="text" placeholder={data.country} onChange={handleuserNameChange} />
-                    </div>
-                    {/* <div className="ProfileContentPSRow1B">
-                        <p>Gender</p>
-                        <input type="text" placeholder={data.gender} onChange={handlephoneNumberChange} />
-                    </div> */}
                 </div>
                <p style={{marginTop: "1%", marginLeft: "2%", color: "green", fontSize: "18px", fontFamily:"Nunito, sans-serif;"}}>{msg}</p>
                 {/* <div className="ProfileContentPSRow3">

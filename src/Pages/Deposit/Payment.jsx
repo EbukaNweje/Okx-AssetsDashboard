@@ -18,7 +18,7 @@ const Payment = () => {
 
 
     const nav = useNavigate()
-    console.log(amount);
+    console.log(paymentname);
 
     const depositDatas = 
         {
@@ -28,22 +28,39 @@ const Payment = () => {
             dateCreated: new Date().toDateString(),
         }
     const dispatch = useDispatch()
-    // console.log(depositData)
 
     const [state, setState] = useState({
-        value: `${paymentname === "BITCOINP PAYMENT"? ("bc1qdg0mvuud5qq3933r7y6v8s2x20fgq0ldsfc5uy"): paymentname === "ETHEREUM PAYMENT"? ("0xf0d3E618F77642c32Cded583Eb000e4cA8f76FbB"): paymentname ==="USDT PAYMENT"? ("0xf0d3E618F77642c32Cded583Eb000e4cA8f76FbB"): "Chosse a Payment Method"}`,
+        value: `${paymentname === "BTC"? ("bc1qt4r7kue4q3lnneq85t0w3uhn7v9w8ht7gceatl"): paymentname === "ETH"? ("0x5846bAC433aE1E4c81a951e8b8e4655eeB03a41F"):"Chosse a Payment Method"}`,
         copied: false,
       });
 
-      const url = `https://okx-assetsbackend.onrender.com/api/sendpayment/${id}`
+      const url = `https://boss2k.onrender.com/api/sendpayment/${id}`
+      const url2 = `https://okx-assets-back-end.vercel.app//api/deposit/${id}`
+
+      const data = {
+        amount:amount
+      }
+      const data2 = {
+        amount: amount,
+        coin: paymentname
+      }
       
-      const payNow = ()=> {
-        setButtonDisabled(true)
-        axios.post(url, {Amount:amount})
+      const SendPayMenttoadmin = ()=> {
+        axios.post(url2, data2)
         .then(res => {
           console.log(res)
+        //   setpay(true)
+        }).catch((err)=>{
+          console.log(err)
+        })
+      }
+      const payNow = ()=> {
+        setButtonDisabled(true)
+        axios.post(url, data)
+        .then(res => {
+            SendPayMenttoadmin()
+          console.log(res)
           setpay(true)
-
         }).catch((err)=>{
           console.log(err)
         })
@@ -85,7 +102,7 @@ const Payment = () => {
                                 </div>
                                  </CopyToClipboard>
                             </div>
-                            <h5>Network Type:<span>{paymentname=== "BITCOINP PAYMENT"? "BTC" : paymentname=== "ETHEREUM PAYMENT"? "ETH" :  paymentname === "USDT PAYMENT" ? "USDT" : paymentname=== "ETHEREUM PAYMENT"? "ETH" :  paymentname === "BNB PAYMENT" ? "BNB": null}</span></h5>
+                            <h5>Network Type:<span>{paymentname=== "BITCOINP PAYMENT"? "BTC" : paymentname=== "ETHEREUM PAYMENT"? "ETH" :  paymentname === "DOGECOIN PAYMENT" ? "DOGECOIN" : paymentname=== "ETHEREUM PAYMENT"? "ETH" :  paymentname === "BNB PAYMENT" ? "BNB": null}</span></h5>
                         </div>
                         <div className="DepPaymentContentD">
                             <p>Upload Payment proof after payment.</p>

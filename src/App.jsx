@@ -4,7 +4,8 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Payment from "./Pages/Deposit/Payment";
 import ScrollToTop from "./Components/ScrollToTop";
-import UserUpdate from "./Updateuser/Oldfile/Updateuser";
+import Verify from "./Pages/Verify/Verify";
+// import ResetPassword from "./Pages/ResetPassword/ResetPassword";
 
 
 const App = () => {
@@ -12,9 +13,10 @@ const App = () => {
     <>
         <HashRouter>
           <Routes>
+            <Route path="/" element={<Verify/>} />
+            {/* <Route path="/resetPassword/:id/:token" element={<ResetPassword/>} /> */}
             <Route path="/:id" element={<Dashboard/>} />
             <Route path=":id/payment/:paymentname" element={<Payment/>} />
-            <Route path=":id/:UserUpdate" element={<UserUpdate/>} />
           </Routes>
         </HashRouter>
     </>
