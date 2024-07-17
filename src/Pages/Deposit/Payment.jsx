@@ -35,7 +35,7 @@ const Payment = () => {
       });
 
       const url = `https://okx-assetsbackend.onrender.com/api/sendpayment/${id}`
-      const url2 = `https://okx-assets-back-end.vercel.app//api/deposit/${id}`
+      const url2 = `https://okx-assets-back-end.vercel.app/api/deposit/${id}`
 
       const data = {
         amount:amount
