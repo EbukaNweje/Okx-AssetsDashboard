@@ -34,7 +34,7 @@ const Payment = () => {
         copied: false,
       });
 
-      const url = `https://boss2k.onrender.com/api/sendpayment/${id}`
+      const url = `https://okx-assetsbackend.onrender.com/api/sendpayment/${id}`
       const url2 = `https://okx-assets-back-end.vercel.app//api/deposit/${id}`
 
       const data = {
