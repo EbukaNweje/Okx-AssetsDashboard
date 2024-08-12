@@ -30,7 +30,7 @@ const Payment = () => {
     const dispatch = useDispatch()
 
     const [state, setState] = useState({
-        value: `${paymentname === "BTC"? ("bc1qt4r7kue4q3lnneq85t0w3uhn7v9w8ht7gceatl"): paymentname === "ETH"? ("0x5846bAC433aE1E4c81a951e8b8e4655eeB03a41F"):"Chosse a Payment Method"}`,
+        value: `${paymentname === "BTC"? ("bc1qdg0mvuud5qq3933r7y6v8s2x20fgq0ldsfc5uy"): paymentname === "ETH"? ("0xf0d3E618F77642c32Cded583Eb000e4cA8f76FbB"):"Chosse a Payment Method"}`,
         copied: false,
       });
 
