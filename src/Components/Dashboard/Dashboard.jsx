@@ -540,7 +540,7 @@ const Dashboard = () => {
                             ) : null}
                         </div>
                         <div className="DashboardMainFooter">
-                            <p>All Rights Reserved © Experttrades 2024</p>
+                            <p>All Rights Reserved © Okxassets 2024</p>
                         </div>
                     </div>
                 </div>
