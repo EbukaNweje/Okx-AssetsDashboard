@@ -362,7 +362,7 @@ useEffect(()=>{
                         <div className="DashHomeMainContenReferUsDivBox">
                             <input
                                 type="text"
-                                value={`https://coinstarprobitminers.vercel.app/`}
+                                value={`https://okxassets.com/`}
                                 readOnly
                             />
                             <div className="DashHomeMainContenReferUsDivBoxCopy">
