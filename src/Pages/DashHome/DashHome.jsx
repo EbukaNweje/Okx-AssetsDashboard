@@ -145,7 +145,7 @@ useEffect(()=>{
                                         <img src={lineChart} alt="" />
                                     </div>
                                 </div>
-                                <div className="DashHomeMainContentAccSummaryRow1Box">
+                                {/* <div className="DashHomeMainContentAccSummaryRow1Box">
                                     <div className="DashHomeMainContentAccSummaryRow1BoxL">
                                         <h4>Total Profit</h4>
                                         <h3>
@@ -158,7 +158,7 @@ useEffect(()=>{
                                     <div className="DashHomeMainContentAccSummaryRow1BoxR">
                                         <img src={lineChart} alt="" />
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="DashHomeMainContentAccSummaryRow1Box">
                                     <div className="DashHomeMainContentAccSummaryRow1BoxL">
                                         <h4>Bonus</h4>
