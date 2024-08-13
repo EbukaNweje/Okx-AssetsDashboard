@@ -160,7 +160,7 @@ useEffect(()=>{
                                     </div>
                                 </div>
                                 <div className="DashHomeMainContentAccSummaryRow1Box">
-                                    <div className="DashHomeMainContentAccSummaryRow1BoxL">
+                                    {/* <div className="DashHomeMainContentAccSummaryRow1BoxL">
                                         <h4>Bonus</h4>
                                         <h3>$ &nbsp;{userData?.bonus}.00</h3>
                                         <span style={{fontWeight: "700"}}>
@@ -169,9 +169,9 @@ useEffect(()=>{
                                     <div className="DashHomeMainContentAccSummaryRow1BoxR">
                                         <img src={lineChart} alt="" />
                                     </div>
-                                </div>
+                                </div> */}
                                 {/* <div className="DashHomeMainContentAccSummaryRow2"> */}
-                                <div className="DashHomeMainContentAccSummaryRow2Box">
+                                {/* <div className="DashHomeMainContentAccSummaryRow2Box">
                                     <div className="DashHomeMainContentAccSummaryRow2BoxL">
                                         <h4>Referral Bonus</h4>
                                         <h3>$ &nbsp;{userData?.ref}.00</h3>
@@ -181,7 +181,7 @@ useEffect(()=>{
                                     <div className="DashHomeMainContentAccSummaryRow1BoxR">
                                         <img src={lineChart} alt="" />
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="DashHomeMainContentAccSummaryRow2Box">
                                     <div className="DashHomeMainContentAccSummaryRow2BoxL">
                                         <h4>Total Deposits</h4>
