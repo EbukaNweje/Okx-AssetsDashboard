@@ -125,9 +125,9 @@ useEffect(()=>{
                 </div>
                 <div className="DashHomeMainContent">
                     <div className="DashHomeMainContentAccSummaryDiv">
-                        <h3 className="DashHomeMainContentAccSummaryDivH3Text">
+                        {/* <h3 className="DashHomeMainContentAccSummaryDivH3Text">
                             Account Summary
-                        </h3>
+                        </h3> */}
                         <div className="DashHomeMainContentAccSummary">
                             <div className="DashHomeMainContentAccSummaryRow1">
                                 <div className="DashHomeMainContentAccSummaryRow1Box">
