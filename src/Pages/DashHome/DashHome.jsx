@@ -117,9 +117,9 @@ useEffect(()=>{
                 <h2 className="DashHomeHeaderText">
                     Welcome, <span>{userData?.fullName}</span>
                 </h2>
-                <div className="DashHomeInfoBox1">
+                {/* <div className="DashHomeInfoBox1">
                     <p>Welcome to Okx-Assets, You set the level.</p>
-                </div>
+                </div> */}
                 <div className="DashHomeInfoBox2">
                     <p>Welcome to Okx-Assets</p>
                 </div>
