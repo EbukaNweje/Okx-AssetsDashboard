@@ -10,7 +10,7 @@ const DetailPlan = ({handleShowMyPlans}) => {
     const singlePlans = useSelector(
         (state) => state.persisitedReducer.singlePlan
     );
-    console.log(singlePlans);
+    console.log("Loking for",singlePlans);
     const [openModal, setOpenModal] = useState(false);
 
     const handleCloseModal = () => {
@@ -82,7 +82,7 @@ const DetailPlan = ({handleShowMyPlans}) => {
                         <div className="DetailPlanInfoDivMain1">
                             <div className="DetailPlanInfoDivMain1DivA">
                                 <h3>
-                                    ${singlePlans?.plan.investment.amount}.00{" "}
+                                    ${singlePlans?.amount}.00{" "}
                                     <span>Invested amount</span>
                                 </h3>
                                 <h3>+</h3>
@@ -92,7 +92,7 @@ const DetailPlan = ({handleShowMyPlans}) => {
                             </div>
                             <div className="DetailPlanInfoDivMain1DivB">
                                 <h3>
-                                    ${singlePlans?.plan.investment.totalDailyInterest}.00{" "}
+                                    ${singlePlans?.plan.percentageInterest}.00{" "}
                                     <span>Total return</span>
                                 </h3>
                             </div>
@@ -104,11 +104,11 @@ const DetailPlan = ({handleShowMyPlans}) => {
                             </div>
                             <div className="DetailPlanInfoDivMain2B">
                                 <p>Start Date:</p>
-                                <p>{singlePlans?.plan.investment.Date}</p>
+                                <p>{singlePlans?.Date}</p>
                             </div>
                             <div className="DetailPlanInfoDivMain2C">
                                 <p>End Date:</p>
-                                <p>{singlePlans?.plan.investment.endDate}</p>
+                                <p>{singlePlans?.endDate}</p>
                             </div>
                         </div>
                         <div className="DetailPlanInfoDivMain2">

@@ -197,7 +197,7 @@ useEffect(()=>{
                                 </div> */}
                                 <div className="DashHomeMainContentAccSummaryRow2Box">
                                     <div className="DashHomeMainContentAccSummaryRow2BoxL">
-                                        <h4>Total withdrawal</h4>
+                                        <h4>Total Withdrawal</h4>
                                         <h3>
                                             $ &nbsp;{userData?.totalWithdrawal}
                                             .00

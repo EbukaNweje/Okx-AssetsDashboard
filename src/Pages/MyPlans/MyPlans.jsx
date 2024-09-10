@@ -54,7 +54,7 @@ const MyPlans = ({myplans, homechange, handleShowDetailPlan}) => {
 
     const {id} = useParams()
     const [alluserplan, setAlluserplan] = useState();
-    const url4 = `https://okx-assets-back-end.vercel.app/api/getalluserplan/${id}`
+    const url4 = `https://okx-assets-back-end.vercel.app/api/getallinvestmentplan/${id}`
 
     const getalluserplan = ()=>{
         axios.get(url4)
@@ -67,7 +67,7 @@ const MyPlans = ({myplans, homechange, handleShowDetailPlan}) => {
         })
 }
 
-console.log(alluserplan?.length)
+console.log(alluserplan?.data)
 
 useEffect(()=>{
     getalluserplan()
@@ -82,31 +82,31 @@ useEffect(()=>{
                         <p>Your Investment plan is on. </p>
                     </div> */}
                     <div className="MyPlansContentWrap">
-                        {alluserplan?.length > 0 ? 
+                        {alluserplan?.data?.length > 0 ? 
 
                             <>
                                 <div className="MyPlansActiveDiv">
-                                    {alluserplan?.map((item, index) => (
+                                    {alluserplan?.data?.map((item, index) => (
                                         <div
                                             className="MyPlansActiveDivItem1"
                                             key={index}
                                         >
                                             <div className="MyPlansActiveDivItem1A">
                                                 <p>{item?.plan.planName}</p>
-                                                <p>
+                                                {/* <p>
                                                     Amount - $
                                                     {item?.plan.investment.amount}
-                                                </p>
+                                                </p> */}
                                             </div>
                                             <div className="MyPlansActiveDivItem1B">
                                                 <p>
-                                                    {item?.plan.investment.Date}
+                                                    {item?.Date}
                                                     <FaArrowRight className="FaArrowRight" />
                                                 </p>
                                                 <p>Start Date</p>
                                             </div>
                                             <div className="MyPlansActiveDivItem1C">
-                                                <p>{item?.plan.investment.endDate}</p>
+                                                <p>{item?.endDate}</p>
                                                 <p>End Date</p>
                                             </div>
                                             <div className="MyPlansActiveDivItem1D">

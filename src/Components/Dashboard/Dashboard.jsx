@@ -403,7 +403,7 @@ const Dashboard = () => {
                                         <span>Trading Plans</span>
                                     </NavLink>
                                 </div>
-                                <div className="DashboardNavLinksRow5">
+                                {/* <div className="DashboardNavLinksRow5">
                                     <NavLink
                                         className="DashboardNavLinksItem"
                                         onClick={handleShowMyPlans}
@@ -424,7 +424,7 @@ const Dashboard = () => {
                                         </span>
                                         <span>Referrals</span>
                                     </NavLink>
-                                </div>
+                                </div> */}
 
                                 {userData?.isAdmin ? (
                                     <div className="DashboardNavLinksRow5">
